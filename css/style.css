@@ -822,8 +822,35 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   top: 0;
 }
+.video-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.video-popup video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.work:hover .video-popup {
+  display: flex; /* Show the video popup on hover */
+}
 
 .work {
+  border-radius: 30px;
+  position: relative;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -847,7 +874,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: table-cell;
   vertical-align: middle;
   height: 270px;
-  background: #fff;
+  background: #ffffff;
   opacity: 0;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -869,6 +896,7 @@ h1, h2, h3, h4, h5, h6, figure {
   -webkit-transform: translate3d(0, 15px, 0);
   transform: translate3d(0, 15px, 0);
 }
+
 @media screen and (max-width: 768px) {
   .work .desc {
     opacity: 1;

@@ -173,3 +173,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+document.querySelectorAll('.work').forEach((work) => {
+    const video = work.querySelector('.video-popup video');
+
+    work.addEventListener('mouseenter', () => {
+        video.play();
+    });
+
+    work.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0; // Reset the video to the beginning
+    });
+});
