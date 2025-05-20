@@ -173,3 +173,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+document.querySelectorAll('.work').forEach((work) => {
+    const video = work.querySelector('.video-popup video');
+
+    work.addEventListener('mouseenter', () => {
+        video.play();
+    });
+
+    work.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0; // Reset the video to the beginning
+    });
+});
+
+
+
+
+window.onload = function() {
+	var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
+	shadowRoot.querySelector('#logo').remove();
+}
+
+
+window.onload = function() {
+    const splineViewers = document.querySelectorAll('spline-viewer');
+    splineViewers.forEach((viewer) => {
+        const shadowRoot = viewer.shadowRoot;
+        const logo = shadowRoot.querySelector('#logo');
+        if (logo) {
+            logo.remove(); // Remove the "Build with Spline" logo
+        }
+    });
+};
