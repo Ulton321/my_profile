@@ -247,8 +247,9 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-features {
-  background: #FF9000;
+  background: #000000;
 }
+
 #fh5co-features h2 {
   color: #fff;
 }
@@ -302,6 +303,12 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-features .feature-left p a {
   color: #ffffff !important;
 }
+
+
+#fh5co-skills {
+  background-color: black;
+}
+
 
 #fh5co-about,
 #fh5co-resume,
