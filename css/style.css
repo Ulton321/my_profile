@@ -1486,3 +1486,44 @@ input[type="text"] {
     position: relative;
     overflow: hidden;
   }
+
+
+
+ /* For shiny text effect  */
+
+ .shiny-text {
+      color: #b5b5b5a4;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 60%
+      );
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      display: inline-block;
+      animation: shine 2s linear infinite;
+      -webkit-text-fill-color: transparent;
+    }
+    @keyframes shine {
+      0% { background-position: 100%; }
+      100% { background-position: -100%; }
+    }
+
+
+
+
+  /* Text rotation effect */
+
+.text-rotate-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(0px);
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.text-rotate-letter.show {
+  opacity: 1;
+  transform: translateX(0);
+}
