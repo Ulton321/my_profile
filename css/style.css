@@ -53,7 +53,7 @@ a {
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #FF9000;
+  color: #fffb00;
   outline: none;
   text-decoration: none;
 }
@@ -76,12 +76,12 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-moz-selection {
   color: #fff;
-  background: #FF9000;
+  background: #ffffff;
 }
 
 ::selection {
   color: #fff;
-  background: #FF9000;
+  background: #ffffff;
 }
 
 #fh5co-header,
@@ -283,7 +283,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: table-cell;
   vertical-align: middle;
   height: 100px;
-  color: #FF9000 !important;
+  color: #ffffff !important;
 }
 #fh5co-features .feature-left .feature-copy {
   width: 100%;
@@ -662,7 +662,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 40px;
   left: 50%;
   margin-left: -21px;
-  background-color: #FF9000;
+  background-color: #000000;
   z-index: 100;
   display: table;
   -webkit-border-radius: 50%;
@@ -1516,14 +1516,3 @@ input[type="text"] {
 
   /* Text rotation effect */
 
-.text-rotate-letter {
-  display: inline-block;
-  opacity: 0;
-  transform: translateX(0px);
-  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
-}
-
-.text-rotate-letter.show {
-  opacity: 1;
-  transform: translateX(0);
-}

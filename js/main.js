@@ -212,37 +212,10 @@ window.onload = function() {
 
 // text rotating 
 
-const words = [
-  'Software Developer',
-  'Cyber Security Enthusiast',
-  'AI Researcher',
-  'Full Stack Engineer'
-];
+const texts = ['Software Developer', 'Data Science', 'Machine learning', 'Web Developer', 'AI Enthusiast', 'Tech Innovator'];
 let idx = 0;
 const el = document.getElementById('rotating-text');
-
-function animateLetters(word) {
-  el.innerHTML = ''; // Clear previous
-  const wordSpan = document.createElement('span');
-  wordSpan.className = 'text-rotate-word show';
-  // Add each letter as a span
-  [...word].forEach((char, i) => {
-    const letter = document.createElement('span');
-    letter.className = 'text-rotate-letter';
-    letter.textContent = char;
-    wordSpan.appendChild(letter);
-    // Animate each letter with a staggered delay
-    setTimeout(() => {
-      letter.classList.add('show');
-    }, i * 60); // 60ms per letter
-  });
-  el.appendChild(wordSpan);
-}
-
-let interval = setInterval(() => {
-  idx = (idx + 1) % words.length;
-  animateLetters(words[idx]);
-}, 2500);
-
-// Initialize first word
-animateLetters(words[0]);
+setInterval(() => {
+  idx = (idx + 1) % texts.length;
+  el.textContent = texts[idx];
+}, 2000); // 2000ms = 2 seconds
