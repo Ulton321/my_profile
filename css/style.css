@@ -1516,3 +1516,56 @@ input[type="text"] {
 
   /* Text rotation effect */
 
+
+  
+
+
+
+/* Project Display */
+
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project-list li {
+  margin-bottom: 2rem;
+  position: relative;
+  width: 100%; 
+  max-width: 500px;
+  align-items: center; 
+}
+
+.project-title {
+  font-size: 1.3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.project-title:hover {
+  color: rgb(0, 0, 0);
+}
+
+.project-video {
+  display: none;
+  margin-top: 1rem;
+  max-width: 400px;
+}
+
+.project-list li:hover .project-video {
+  display: block;
+}
+
+.project-video video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
