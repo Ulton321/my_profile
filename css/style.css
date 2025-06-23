@@ -53,7 +53,7 @@ a {
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #FF9000;
+  color: #fffb00;
   outline: none;
   text-decoration: none;
 }
@@ -76,12 +76,12 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-moz-selection {
   color: #fff;
-  background: #FF9000;
+  background: #ffffff;
 }
 
 ::selection {
   color: #fff;
-  background: #FF9000;
+  background: #ffffff;
 }
 
 #fh5co-header,
@@ -283,7 +283,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: table-cell;
   vertical-align: middle;
   height: 100px;
-  color: #FF9000 !important;
+  color: #ffffff !important;
 }
 #fh5co-features .feature-left .feature-copy {
   width: 100%;
@@ -662,7 +662,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 40px;
   left: 50%;
   margin-left: -21px;
-  background-color: #FF9000;
+  background-color: #000000;
   z-index: 100;
   display: table;
   -webkit-border-radius: 50%;
@@ -1486,3 +1486,86 @@ input[type="text"] {
     position: relative;
     overflow: hidden;
   }
+
+
+
+ /* For shiny text effect  */
+
+ .shiny-text {
+      color: #b5b5b5a4;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 60%
+      );
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      display: inline-block;
+      animation: shine 2s linear infinite;
+      -webkit-text-fill-color: transparent;
+    }
+    @keyframes shine {
+      0% { background-position: 100%; }
+      100% { background-position: -100%; }
+    }
+
+
+
+
+  /* Text rotation effect */
+
+
+  
+
+
+
+/* Project Display */
+
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project-list li {
+  margin-bottom: 2rem;
+  position: relative;
+  width: 100%; 
+  max-width: 500px;
+  align-items: center; 
+}
+
+.project-title {
+  font-size: 1.3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.project-title:hover {
+  color: rgb(0, 0, 0);
+}
+
+.project-video {
+  display: none;
+  margin-top: 1rem;
+  max-width: 400px;
+}
+
+.project-list li:hover .project-video {
+  display: block;
+}
+
+.project-video video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}

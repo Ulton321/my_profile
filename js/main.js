@@ -207,3 +207,15 @@ window.onload = function() {
         }
     });
 };
+
+
+
+// text rotating 
+
+const texts = ['Software Developer', 'Data Science', 'Machine learning', 'Web Developer', 'AI Enthusiast', 'Tech Innovator'];
+let idx = 0;
+const el = document.getElementById('rotating-text');
+setInterval(() => {
+  idx = (idx + 1) % texts.length;
+  el.textContent = texts[idx];
+}, 2000); // 2000ms = 2 seconds
