@@ -219,3 +219,7 @@ setInterval(() => {
   idx = (idx + 1) % texts.length;
   el.textContent = texts[idx];
 }, 2000); // 2000ms = 2 seconds
+
+
+
+//Video popup

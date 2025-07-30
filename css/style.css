@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #FF9000;
+  background: #000000;
 }
 
 ::-moz-selection {
@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .fh5co-bg-dark {
   background: #2F3C4F;
-  background: #FF9000;
+  background: #000000;
 }
 .fh5co-bg-dark .fh5co-heading h2 {
   color: #fff !important;
@@ -1524,30 +1524,25 @@ input[type="text"] {
 /* Project Display */
 
 
-.project-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .project-list li {
   margin-bottom: 2rem;
   position: relative;
-  width: 100%; 
+  width: 100%;
   max-width: 500px;
-  align-items: center; 
+  display: flex;
+  align-items: center;
 }
 
 .project-title {
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: #fff;
   cursor: pointer;
   transition: color 0.2s;
   display: inline-block;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 .project-title:hover {
@@ -1555,17 +1550,35 @@ input[type="text"] {
 }
 
 .project-video {
-  display: none;
-  margin-top: 1rem;
+  position: absolute;
+  top: 50%;
+  right: -430px; /* Adjust as needed for your layout */
+  left: auto;
+  transform: translateY(-50%) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
   max-width: 400px;
+  width: 400px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(255,144,0,0.4);
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+  z-index: 20;
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-list li:hover .project-video {
-  display: block;
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+  pointer-events: auto;
 }
 
 .project-video video {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s;
 }
