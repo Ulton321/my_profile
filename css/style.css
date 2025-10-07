@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #FF9000;
+  background: #000000;
 }
 
 ::-moz-selection {
@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .fh5co-bg-dark {
   background: #2F3C4F;
-  background: #FF9000;
+  background: #000000;
 }
 .fh5co-bg-dark .fh5co-heading h2 {
   color: #fff !important;
@@ -1524,30 +1524,25 @@ input[type="text"] {
 /* Project Display */
 
 
-.project-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .project-list li {
   margin-bottom: 2rem;
   position: relative;
-  width: 100%; 
+  width: 100%;
   max-width: 500px;
-  align-items: center; 
+  display: flex;
+  align-items: center;
 }
 
 .project-title {
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: #fff;
   cursor: pointer;
   transition: color 0.2s;
   display: inline-block;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 .project-title:hover {
@@ -1555,17 +1550,189 @@ input[type="text"] {
 }
 
 .project-video {
-  display: none;
-  margin-top: 1rem;
+  position: absolute;
+  top: 50%;
+  right: -430px; /* Adjust as needed for your layout */
+  left: auto;
+  transform: translateY(-50%) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
   max-width: 400px;
+  width: 400px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(255,144,0,0.4);
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+  z-index: 20;
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-list li:hover .project-video {
-  display: block;
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+  pointer-events: auto;
 }
 
 .project-video video {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s;
+}
+
+
+
+/* Project Cards Enhancement */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3); /* Transparent black background */
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(255, 144, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5); /* Slightly more opaque on hover */
+}
+
+.project-card .blog-bg {
+  height: 250px;
+  background-size: cover !important;
+  background-position: center !important;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover .blog-bg {
+  transform: scale(1.05);
+}
+
+.project-card .blog-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,144,0,0.1), rgba(0,200,255,0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .blog-bg::after {
+  opacity: 1;
+}
+
+.project-card .blog-text {
+  padding: 1.5rem;
+  background: transparent; /* Fully transparent */
+}
+
+.project-card .posted_on {
+  color: #FF9000;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-card h3 a {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-card h3 a:hover {
+  color: #FF9000;
+  text-decoration: none;
+}
+
+.project-card .blog-text p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 1rem 0;
+  font-size: 0.95rem; /* Slightly smaller for better fit */
+}
+
+.project-card .stuff {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.project-card .stuff li {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.project-card .stuff li i {
+  margin-right: 0.5rem;
+  color: #FF9000;
+}
+
+/* GitHub Link Styling */
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  color: #fff !important;
+  text-decoration: none;
+  background: rgba(255, 144, 0, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 144, 0, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.github-link:hover {
+  background: rgba(255, 144, 0, 0.2);
+  border-color: #ffffff;
+  color: #ffffff !important;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.github-link i {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-card .blog-bg {
+    height: 200px;
+  }
+  
+  .project-card .blog-text {
+    padding: 1rem;
+  }
+}
+
+/* Enhanced transparency for the entire blog section */
+#fh5co-blog {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+#fh5co-blog h2 {
+  color: #fff;
 }
