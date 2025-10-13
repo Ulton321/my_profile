@@ -501,11 +501,52 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-	<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+	<!-- Lazy Load Spline Viewer Script -->
+	<script>
+		// Lazy load Spline viewer script when viewer elements are about to enter viewport
+		(function() {
+			let splineScriptLoaded = false;
 
-	<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+			function loadSplineScript() {
+				if (splineScriptLoaded) return;
+				splineScriptLoaded = true;
 
+				const script = document.createElement('script');
+				script.type = 'module';
+				script.src = 'https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js';
+				document.body.appendChild(script);
+			}
 
+			// Use Intersection Observer to detect when spline-viewer elements are about to enter viewport
+			if ('IntersectionObserver' in window) {
+				const observerOptions = {
+					root: null,
+					rootMargin: '200px', // Load 200px before element enters viewport
+					threshold: 0
+				};
+
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							loadSplineScript();
+							observer.disconnect(); // Stop observing once script is loaded
+						}
+					});
+				}, observerOptions);
+
+				// Observe all spline-viewer elements after DOM is ready
+				window.addEventListener('DOMContentLoaded', () => {
+					const splineViewers = document.querySelectorAll('spline-viewer');
+					splineViewers.forEach((viewer) => {
+						observer.observe(viewer);
+					});
+				});
+			} else {
+				// Fallback for browsers without IntersectionObserver support
+				window.addEventListener('DOMContentLoaded', loadSplineScript);
+			}
+		})();
+	</script>
 
 </body>
 
