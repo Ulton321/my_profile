@@ -57,8 +57,8 @@
 		<!-- Header Section With Spline Background -->
 		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" data-stellar-background-ratio="0.5">
 			<!-- Spline 3D Background -->
-			<spline-viewer class="spline-bg"
-				url="https://prod.spline.design/sEdP4c932IfO1K01/scene.splinecode"></spline-viewer>
+			<!-- <spline-viewer class="spline-bg"
+				url="https://prod.spline.design/sEdP4c932IfO1K01/scene.splinecode"></spline-viewer> -->
 
 			<!-- Dark Overlay for Readability -->
 			<div class="overlay"></div>
@@ -244,9 +244,9 @@
             <div class="col-md-12">
                 <!-- Wrapper with controlled height -->
                 <div class="spline-container">
-                    <spline-viewer
+                    <!-- <spline-viewer
                         url="https://prod.spline.design/Rim23UlJeHwaW7rM/scene.splinecode">
-                    </spline-viewer>
+                    </spline-viewer> -->
                 </div>
             </div>
         </div>
@@ -262,70 +262,168 @@
   </div>
 </div>
 
-<div id="fh5co-blog">
+<!-- Replace your current #fh5co-blog section with this -->
+<div id="fh5co-work" class="work-showcase">
     <div class="container">
+        <!-- Section Header -->
         <div class="row animate-box">
-            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                <h2>My Work!!</h2>
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <div class="section-header">
+                    <h2 class="shiny-text">Featured Projects</h2>
+                    <p class="section-subtitle">Exploring the intersection of AI, web development, and innovation</p>
+                    <div class="header-line"></div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="fh5co-blog animate-box project-card">
-                    <a href="#" class="blog-bg" style="background-image: url(images/image.png);"></a>
-                    <div class="blog-text">
-                        <span class="posted_on">Dec. 2024</span>
-                        <h3><a href="#">AES DES Encryption</a></h3>
-                        <p>A secure encryption tool implementing AES and DES algorithms for data protection and cybersecurity applications.</p>
-                        <ul class="stuff">
-                            <li><i class="icon-heart2"></i>324</li>
-                            <li><i class="icon-eye2"></i>512</li>
-                            <li>
-                                <a href="https://github.com/Ulton321/aes-des-encryption" class="github-link" target="_blank">
-                                    <i class="icon-github2"></i>View Code
-                                </a>
-                            </li>
-                        </ul>
+
+        <!-- Filter Tabs -->
+        <div class="row animate-box">
+            <div class="col-md-12 text-center">
+                <div class="work-filter">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="ai">AI & ML</button>
+                    <button class="filter-btn" data-filter="web">Web Dev</button>
+                    <button class="filter-btn" data-filter="research">Research</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="work-grid">
+            <!-- Project 1 -->
+            <div class="work-item animate-box" data-category="ai research" data-animate-effect="fadeInUp">
+                <div class="work-card">
+                    <div class="work-image">
+                        <img src="images/image.png" alt="Protein Property Control">
+                        <div class="work-overlay">
+                            <div class="work-content">
+                                <h3>Complementary Protein Property Control</h3>
+                                <p>Advanced ML research on protein analysis</p>
+                                <div class="work-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">Bioinformatics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-meta">
+                            <span class="work-date">Dec 2024</span>
+                            <span class="work-category">AI Research</span>
+                        </div>
+                        <h4>Protein Property Analysis</h4>
+                        <p>Machine learning approach to predict protein properties using weight and activation space analysis.</p>
+                        <div class="work-stats">
+                            <span><i class="icon-eye2"></i> 1.2k</span>
+                            <span><i class="icon-heart2"></i> 324</span>
+                            <span><i class="icon-fork"></i> 89</span>
+                        </div>
+                        <div class="work-actions">
+                            <a href="https://github.com/Ulton321/aes-des-encryption" target="_blank" class="btn-work-primary">
+                                <i class="icon-github2"></i> View Code
+                            </a>
+                            <a href="#" class="btn-work-secondary">
+                                <i class="icon-eye2"></i> Live Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="fh5co-blog animate-box project-card">
-                    <a href="#" class="blog-bg" style="background-image: url(images/portfolio-2.jpg);"></a>
-                    <div class="blog-text">
-                        <span class="posted_on">Nov. 2024</span>
-                        <h3><a href="#">Portfolio Website</a></h3>
-                        <p>A responsive personal portfolio showcasing projects, skills, and experience with modern design and 3D elements.</p>
-                        <ul class="stuff">
-                            <li><i class="icon-heart2"></i>189</li>
-                            <li><i class="icon-eye2"></i>428</li>
-                            <li>
-                                <a href="https://github.com/Ulton321/my_profile" class="github-link" target="_blank">
-                                    <i class="icon-github2"></i>View Code
-                                </a>
-                            </li>
-                        </ul>
+
+            <!-- Project 2 -->
+            <div class="work-item animate-box" data-category="web" data-animate-effect="fadeInUp">
+                <div class="work-card">
+                    <div class="work-image">
+                        <img src="images/portfolio-2.jpg" alt="Portfolio Website">
+                        <div class="work-overlay">
+                            <div class="work-content">
+                                <h3>Interactive Portfolio</h3>
+                                <p>Modern responsive portfolio with 3D elements</p>
+                                <div class="work-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Spline</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-meta">
+                            <span class="work-date">Nov 2024</span>
+                            <span class="work-category">Web Development</span>
+                        </div>
+                        <h4>Personal Portfolio</h4>
+                        <p>Responsive portfolio featuring 3D interactive elements and performance optimizations.</p>
+                        <div class="work-stats">
+                            <span><i class="icon-eye2"></i> 856</span>
+                            <span><i class="icon-heart2"></i> 189</span>
+                            <span><i class="icon-fork"></i> 42</span>
+                        </div>
+                        <div class="work-actions">
+                            <a href="https://github.com/Ulton321/my_profile" target="_blank" class="btn-work-primary">
+                                <i class="icon-github2"></i> View Code
+                            </a>
+                            <a href="#" class="btn-work-secondary">
+                                <i class="icon-eye2"></i> Live Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="fh5co-blog animate-box project-card">
-                    <a href="#" class="blog-bg" style="background-image: url(images/portfolio-3.jpg);"></a>
-                    <div class="blog-text">
-                        <span class="posted_on">Oct. 2024</span>
-                        <h3><a href="#">AI Research Bot</a></h3>
-                        <p>An intelligent research assistant powered by machine learning to analyze data and provide automated insights.</p>
-                        <ul class="stuff">
-                            <li><i class="icon-heart2"></i>267</li>
-                            <li><i class="icon-eye2"></i>394</li>
-                            <li>
-                                <a href="https://github.com/Ulton321/ai-research-bot" class="github-link" target="_blank">
-                                    <i class="icon-github2"></i>View Code
-                                </a>
-                            </li>
-                        </ul>
+
+            <!-- Project 3 -->
+            <div class="work-item animate-box" data-category="ai" data-animate-effect="fadeInUp">
+                <div class="work-card">
+                    <div class="work-image">
+                        <img src="images/portfolio-3.jpg" alt="AI Research Bot">
+                        <div class="work-overlay">
+                            <div class="work-content">
+                                <h3>AI Research Assistant</h3>
+                                <p>Intelligent bot for automated research</p>
+                                <div class="work-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">NLP</span>
+                                    <span class="tech-tag">OpenAI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-meta">
+                            <span class="work-date">Oct 2024</span>
+                            <span class="work-category">AI Development</span>
+                        </div>
+                        <h4>Research Assistant Bot</h4>
+                        <p>AI-powered research assistant for automated data analysis and insights generation.</p>
+                        <div class="work-stats">
+                            <span><i class="icon-eye2"></i> 2.1k</span>
+                            <span><i class="icon-heart2"></i> 467</span>
+                            <span><i class="icon-fork"></i> 156</span>
+                        </div>
+                        <div class="work-actions">
+                            <a href="https://github.com/Ulton321/ai-research-bot" target="_blank" class="btn-work-primary">
+                                <i class="icon-github2"></i> View Code
+                            </a>
+                            <a href="#" class="btn-work-secondary">
+                                <i class="icon-eye2"></i> Live Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Add more projects here -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="row animate-box">
+            <div class="col-md-12 text-center">
+                <button class="btn-load-more" id="loadMoreProjects">
+                    <span>Load More Projects</span>
+                    <i class="icon-arrow-down22"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -401,3 +499,4 @@
 
 
 </html>
+
