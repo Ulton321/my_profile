@@ -428,57 +428,158 @@
         </div>
     </div>
 </div>
-		<div id="fh5co-consult">
-			<div class="video fh5co-video" style="background-image: url(images/cover_bg_1.jpg);">
-				<div class="overlay"></div>
-			</div>
-			<div class="choose animate-box">
-				<h2>Contact</h2>
-				<form action="#">
-					<div class="row form-group">
-						<div class="col-md-6">
-							<input type="text" id="fname" class="form-control" placeholder="Your firstname">
-						</div>
-					</div>
-					<div class="row form-group">
-						<div class="col-md-6">
-							<input type="text" id="lname" class="form-control" placeholder="Your lastname">
-						</div>
-					</div>
 
-					<div class="row form-group">
-						<div class="col-md-12">
-							<input type="text" id="email" class="form-control" placeholder="Your email address">
-						</div>
-					</div>
+<div id="fh5co-contact" class="contact-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="section-header">
+                    <h2 class="shiny-text">Let's Work Together</h2>
+                    <p class="section-subtitle">Ready to bring your ideas to life? Let's collaborate and create something amazing!</p>
+                    <div class="header-line"></div>
+                </div>
+            </div>
+        </div>
 
-					<div class="row form-group">
-						<div class="col-md-12">
-							<input type="text" id="subject" class="form-control"
-								placeholder="Your subject of this message">
-						</div>
-					</div>
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-4">
+                <div class="contact-info">
+                    <div class="contact-card animate-box" data-animate-effect="fadeInLeft">
+                        <div class="contact-icon">
+                            <i class="icon-phone"></i>
+                        </div>
+                        <h4>Call Me</h4>
+                        <p>+855 965452117</p>
+                        <a href="tel:+855965452117" class="contact-link">Call Now</a>
+                    </div>
 
-					<div class="row form-group">
-						<div class="col-md-12">
-							<textarea name="message" id="message" cols="30" rows="10" class="form-control"
-								placeholder="Say something about us"></textarea>
-						</div>
-					</div>
-					<div class="form-group">
-						<input type="submit" value="Send Message" class="btn btn-primary">
-					</div>
+                    <div class="contact-card animate-box" data-animate-effect="fadeInLeft">
+                        <div class="contact-icon">
+                            <i class="icon-mail"></i>
+                        </div>
+                        <h4>Email Me</h4>
+                        <p>sonsopheakotra12@gmail.com</p>
+                        <a href="mailto:sonsopheakotra12@gmail.com" class="contact-link">Send Email</a>
+                    </div>
 
-				</form>
-			</div>
-		</div>
+                    <div class="contact-card animate-box" data-animate-effect="fadeInLeft">
+                        <div class="contact-icon">
+                            <i class="icon-location-pin"></i>
+                        </div>
+                        <h4>Location</h4>
+                        <p>Street 369, Phnom Penh<br>Cambodia</p>
+                        <a href="#" class="contact-link">View Map</a>
+                    </div>
+                </div>
+            </div>
 
-		<div id="map" class="fh5co-map"></div>
-	</div>
+            <!-- Contact Form -->
+            <div class="col-md-8">
+                <div class="contact-form-wrapper animate-box" data-animate-effect="fadeInRight">
+                    <div class="contact-form-card">
+                        <h3>Send Me a Message</h3>
+                        <p>Have a project in mind? Let's discuss how we can work together.</p>
+                        
+                        <form id="contactForm" class="modern-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <div class="input-wrapper">
+                                        <input type="text" id="fname" name="firstName" class="form-input" required>
+                                        <label for="fname" class="form-label">First Name</label>
+                                        <div class="input-line"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="input-wrapper">
+                                        <input type="text" id="lname" name="lastName" class="form-input" required>
+                                        <label for="lname" class="form-label">Last Name</label>
+                                        <div class="input-line"></div>
+                                    </div>
+                                </div>
+                            </div>
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <div class="input-wrapper">
+                                        <input type="email" id="email" name="email" class="form-input" required>
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <div class="input-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <div class="input-wrapper">
+                                        <input type="text" id="subject" name="subject" class="form-input" required>
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <div class="input-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Type Selection -->
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label class="select-label">Project Type</label>
+                                    <div class="project-types">
+                                        <label class="project-type-option">
+                                            <input type="radio" name="projectType" value="web-development">
+                                            <span class="checkmark"></span>
+                                            Web Development
+                                        </label>
+                                        <label class="project-type-option">
+                                            <input type="radio" name="projectType" value="ai-ml">
+                                            <span class="checkmark"></span>
+                                            AI & Machine Learning
+                                        </label>
+                                        <label class="project-type-option">
+                                            <input type="radio" name="projectType" value="data-analysis">
+                                            <span class="checkmark"></span>
+                                            Data Analysis
+                                        </label>
+                                        <label class="project-type-option">
+                                            <input type="radio" name="projectType" value="consulting">
+                                            <span class="checkmark"></span>
+                                            Consulting
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <div class="textarea-wrapper">
+                                        <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                                        <label for="message" class="textarea-label">Tell me about your project</label>
+                                        <div class="input-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <button type="submit" class="btn-submit">
+                                        <span class="btn-text">Send Message</span>
+                                        <span class="btn-icon"><i class="icon-paper-plane"></i></span>
+                                        <div class="btn-loading">
+                                            <div class="spinner"></div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Form Status -->
+                            <div id="form-status" class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
