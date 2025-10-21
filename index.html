@@ -429,6 +429,7 @@
     </div>
 </div>
 
+<!-- Contact Form with FormSubmit -->
 <div id="fh5co-contact" class="contact-section">
     <div class="container">
         <!-- Section Header -->
@@ -470,31 +471,60 @@
                         </div>
                         <h4>Location</h4>
                         <p>Street 369, Phnom Penh<br>Cambodia</p>
-                        <a href="#" class="contact-link">View Map</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Street+369+Phnom+Penh+Cambodia" target="_blank" class="contact-link">View Map</a>
+                    </div>
+
+                    <!-- Social Links Card -->
+                    <div class="contact-card animate-box" data-animate-effect="fadeInLeft">
+                        <div class="contact-icon">
+                            <i class="icon-share"></i>
+                        </div>
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/Ulton321" target="_blank" class="social-link">
+                                <i class="icon-github2"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social-link">
+                                <i class="icon-linkedin2"></i>
+                            </a>
+                            <a href="https://www.facebook.com/sonsophakotra" target="_blank" class="social-link">
+                                <i class="icon-facebook2"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@OFFICALOTRA" target="_blank" class="social-link">
+                                <i class="icon-youtube2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Contact Form -->
+            <!-- Contact Form with FormSubmit -->
             <div class="col-md-8">
                 <div class="contact-form-wrapper animate-box" data-animate-effect="fadeInRight">
                     <div class="contact-form-card">
                         <h3>Send Me a Message</h3>
                         <p>Have a project in mind? Let's discuss how we can work together.</p>
                         
-                        <form id="contactForm" class="modern-form">
+                        <!-- FormSubmit Contact Form -->
+                        <form action="https://formsubmit.co/sonsopheakotra12@gmail.com" method="POST" class="modern-form">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://sophakotra.com/thank-you.html">
+                            
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <div class="input-wrapper">
-                                        <input type="text" id="fname" name="firstName" class="form-input" required>
-                                        <label for="fname" class="form-label">First Name</label>
+                                        <input type="text" name="First Name" class="form-input" required>
+                                        <label class="form-label">First Name</label>
                                         <div class="input-line"></div>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <div class="input-wrapper">
-                                        <input type="text" id="lname" name="lastName" class="form-input" required>
-                                        <label for="lname" class="form-label">Last Name</label>
+                                        <input type="text" name="Last Name" class="form-input" required>
+                                        <label class="form-label">Last Name</label>
                                         <div class="input-line"></div>
                                     </div>
                                 </div>
@@ -503,18 +533,25 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <div class="input-wrapper">
-                                        <input type="email" id="email" name="email" class="form-input" required>
-                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" name="Email" class="form-input" required>
+                                        <label class="form-label">Email Address</label>
                                         <div class="input-line"></div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group col-md-12">
+                                <div class="form-group col-md-6">
                                     <div class="input-wrapper">
-                                        <input type="text" id="subject" name="subject" class="form-input" required>
-                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" name="Subject" class="form-input" required>
+                                        <label class="form-label">Subject</label>
+                                        <div class="input-line"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="input-wrapper">
+                                        <input type="tel" name="Phone" class="form-input">
+                                        <label class="form-label">Phone (Optional)</label>
                                         <div class="input-line"></div>
                                     </div>
                                 </div>
@@ -526,22 +563,22 @@
                                     <label class="select-label">Project Type</label>
                                     <div class="project-types">
                                         <label class="project-type-option">
-                                            <input type="radio" name="projectType" value="web-development">
+                                            <input type="radio" name="Project Type" value="Web Development">
                                             <span class="checkmark"></span>
                                             Web Development
                                         </label>
                                         <label class="project-type-option">
-                                            <input type="radio" name="projectType" value="ai-ml">
+                                            <input type="radio" name="Project Type" value="AI & Machine Learning">
                                             <span class="checkmark"></span>
                                             AI & Machine Learning
                                         </label>
                                         <label class="project-type-option">
-                                            <input type="radio" name="projectType" value="data-analysis">
+                                            <input type="radio" name="Project Type" value="Data Analysis">
                                             <span class="checkmark"></span>
                                             Data Analysis
                                         </label>
                                         <label class="project-type-option">
-                                            <input type="radio" name="projectType" value="consulting">
+                                            <input type="radio" name="Project Type" value="Consulting">
                                             <span class="checkmark"></span>
                                             Consulting
                                         </label>
@@ -552,8 +589,8 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <div class="textarea-wrapper">
-                                        <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
-                                        <label for="message" class="textarea-label">Tell me about your project</label>
+                                        <textarea name="Message" class="form-textarea" rows="6" required></textarea>
+                                        <label class="textarea-label">Tell me about your project</label>
                                         <div class="input-line"></div>
                                     </div>
                                 </div>
@@ -564,17 +601,39 @@
                                     <button type="submit" class="btn-submit">
                                         <span class="btn-text">Send Message</span>
                                         <span class="btn-icon"><i class="icon-paper-plane"></i></span>
-                                        <div class="btn-loading">
-                                            <div class="spinner"></div>
-                                        </div>
                                     </button>
                                 </div>
                             </div>
-
-                            <!-- Form Status -->
-                            <div id="form-status" class="form-status"></div>
                         </form>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="row contact-stats animate-box">
+            <div class="col-md-3 text-center">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="stat-item">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Average Response</div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="stat-item">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Years Experience</div>
                 </div>
             </div>
         </div>

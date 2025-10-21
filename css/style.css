@@ -533,7 +533,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 20px;
 }
 #fh5co-about .fh5co-social-icons li a:hover {
-  background: #FF9000;
+  background: #0d82a5;
 }
 
 .fh5co-heading {
@@ -1845,11 +1845,11 @@ input[type="text"] {
     backdrop-filter: blur(15px);
     position: relative;
 }
-
+  
 .work-card:hover {
     transform: translateY(-15px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-    border-color: rgba(0, 212, 255, 0.5);
+    border-color: rgba(182, 182, 182, 0.5);
 }
 
 /* Work Image */
@@ -1876,7 +1876,7 @@ input[type="text"] {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.9), rgba(46, 46, 78, 0.9));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(46, 46, 78, 0.9));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1992,7 +1992,7 @@ input[type="text"] {
 }
 
 .btn-work-primary {
-    background: linear-gradient(45deg, #00d4ff, #0099cc);
+    background: linear-gradient(45deg, #ffffff, #000000);
     color: #ffffff;
     border: none;
 }
@@ -2103,7 +2103,7 @@ input[type="text"] {
 
 /* Modern Contact Section Styles */
 #fh5co-contact {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+    background: linear-gradient(135deg, #000000 0%, #000000 50%, #727272 100%);
     padding: 100px 0;
     position: relative;
     overflow: hidden;
@@ -2148,7 +2148,7 @@ input[type="text"] {
 .header-line {
     width: 100px;
     height: 3px;
-    background: linear-gradient(90deg, #FF9000, #ffffff);
+    background: linear-gradient(90deg, #000000, #ffffff);
     margin: 0 auto;
     border-radius: 2px;
 }
@@ -2167,14 +2167,14 @@ input[type="text"] {
 
 .contact-card:hover {
     transform: translateY(-10px);
-    border-color: rgba(255, 144, 0, 0.5);
-    box-shadow: 0 20px 40px rgba(255, 144, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 40px rgba(228, 228, 228, 0.2);
 }
 
 .contact-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #FF9000, #FFB84D);
+    background: linear-gradient(135deg, #ffffff, #7c7c7c);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2191,25 +2191,25 @@ input[type="text"] {
 }
 
 .contact-card p {
-    color: #b0b0b0;
+    color: #ffffff;
     margin-bottom: 15px;
     line-height: 1.6;
 }
 
 .contact-link {
     display: inline-block;
-    color: #FF9000;
+    color: #ffffff;
     text-decoration: none;
     padding: 8px 20px;
-    border: 1px solid rgba(255, 144, 0, 0.3);
+    border: 1px solid rgba(129, 124, 116, 0.3);
     border-radius: 20px;
     transition: all 0.3s ease;
     font-size: 0.9rem;
 }
 
 .contact-link:hover {
-    background: rgba(255, 144, 0, 0.2);
-    border-color: #FF9000;
+    background: rgba(235, 235, 235, 0.2);
+    border-color: #8a8a8a;
     color: #ffffff;
 }
 
@@ -2267,8 +2267,8 @@ input[type="text"] {
 
 .form-input:focus,
 .form-textarea:focus {
-    border-color: #FF9000;
-    box-shadow: 0 0 20px rgba(255, 144, 0, 0.2);
+    border-color: #000000;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.08);
 }
 
@@ -2292,7 +2292,7 @@ input[type="text"] {
     top: -8px;
     left: 15px;
     font-size: 12px;
-    color: #FF9000;
+    color: #ffffff;
     background: linear-gradient(to right, transparent 0%, #1a1a2e 20%, #1a1a2e 80%, transparent 100%);
 }
 
@@ -2302,7 +2302,7 @@ input[type="text"] {
     left: 0;
     height: 2px;
     width: 0;
-    background: linear-gradient(90deg, #FF9000, #FFB84D);
+    background: linear-gradient(90deg, #83111100, #c5c5c5);
     transition: width 0.3s ease;
 }
 
@@ -2338,8 +2338,8 @@ input[type="text"] {
 }
 
 .project-type-option:hover {
-    border-color: rgba(255, 144, 0, 0.5);
-    background: rgba(255, 144, 0, 0.1);
+    border-color: rgba(19, 199, 199, 0.5);
+    background: rgba(209, 209, 209, 0.1);
     color: #ffffff;
 }
 
@@ -2358,8 +2358,8 @@ input[type="text"] {
 }
 
 .project-type-option input[type="radio"]:checked + .checkmark {
-    border-color: #FF9000;
-    background: #FF9000;
+    border-color: #aaa8a4;
+    background: #474747;
 }
 
 .project-type-option input[type="radio"]:checked + .checkmark:after {
@@ -2376,7 +2376,7 @@ input[type="text"] {
 
 /* Submit Button */
 .btn-submit {
-    background: linear-gradient(135deg, #FF9000, #FFB84D);
+    background: linear-gradient(135deg, #999590, #000000);
     border: none;
     border-radius: 25px;
     padding: 15px 40px;
@@ -2396,7 +2396,7 @@ input[type="text"] {
 
 .btn-submit:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(255, 144, 0, 0.4);
+    box-shadow: 0 15px 30px rgba(153, 153, 153, 0.4);
 }
 
 .btn-loading {
